@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">simpledraw-android</string>
+    <string name="hello">Hello simpledraw-android!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">SimpleDraw</string>
+    
+</resources>
