@@ -10,14 +10,20 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-    }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Required when setting minSdkVersion to 20 or lower
+        multiDexEnabled true    }
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -27,5 +33,6 @@ android {
 }
 
 dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.9'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
